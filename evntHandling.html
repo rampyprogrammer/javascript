@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    name:<input type="text" id="txt">
+    <button id="changeclr">ChangeColor</button>
+    <script>
+        let ele=document.getElementById("changeclr")
+        ele.addEventListener('click',Change)
+        function Change(){
+            let color="#";
+            let letter="1234567890ABCDEF"
+            for(let i=0; i<6; i++){
+                let r=Math.floor(Math.random()*16)
+                color=color+letter[r]
+
+            }
+            document.body.style.backgroundColor=color;
+        }
+    </script>
+</body>
+</html>
